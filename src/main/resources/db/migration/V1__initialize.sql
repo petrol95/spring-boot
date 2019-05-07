@@ -22,7 +22,7 @@ CREATE TABLE user (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 CHARSET=latin1;
 
 INSERT INTO user (username, password, first_name, last_name, email)
-VALUES ('alex', '$2a$10$JFGCTLvmD9DpsodNkH9mLOWdhOuUxjRd7GXMreJxv51GJgu.N6ZKi', 'Alex', 'GeekBrains', 'alex@gb.com');
+VALUES ('alex', '$2a$10$KGJX4fC8NS.JsDbcZjg2Be5PLS.Y3IA9qbvKKj3S2Rqjb4a9bjYZO', 'Alex', 'GeekBrains', 'alex@gb.com');
 
 DROP TABLE IF EXISTS users_roles;
 
