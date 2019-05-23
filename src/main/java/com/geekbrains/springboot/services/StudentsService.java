@@ -3,12 +3,9 @@ package com.geekbrains.springboot.services;
 import com.geekbrains.springboot.entities.Course;
 import com.geekbrains.springboot.entities.Student;
 import com.geekbrains.springboot.repositories.StudentsRepository;
-import org.hibernate.annotations.Fetch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.FetchType;
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -47,7 +44,7 @@ public class StudentsService {
     }
 
     public List<Course> getMissingCoursesByStudentId(Long id) {
-        List<Course> courses = coursesService.getAllCoursesList();
+        List<Course> courses = coursesService.getAllCourses();
         List<Course> studentsCourses = studentsRepository.findOneById(id).getCourses();
         courses.removeAll(studentsCourses);
         return courses;

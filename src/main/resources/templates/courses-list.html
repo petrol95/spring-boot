@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head th:insert = "~{head:: headerFragment(Courses)}"></head>
+<body>
+    <div>
+        <div th:insert = "~{my-header :: header-fragment(Courses)}"></div>
+    </div>
+    <div class = "container">
+        <h1>Courses List</h1>
+        <table class = "table">
+            <thead class = "thead-light">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+            </tr>
+            </thead>
+            <tr th:each = "course : ${coursesList}">
+                <td th:text = "${course.id}"/>
+                <td th:text = "${course.title}"/>
+            </tr>
+        </table>
+        <br>
+    </div>
+</body>
+</html>
